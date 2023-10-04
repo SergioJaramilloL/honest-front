@@ -1,0 +1,41 @@
+$font-sans: 'Open Sans', sans-serif;
+$font-robot: 'Roboto', sans-serif;
+$font-titilium: 'Titillium Web', sans-serif;
+$size-xxl: 2.5rem; // 40px
+$size-xl: 1.875rem; //30px
+$size-lg: 1.478rem; //23px
+$size-md: 1.125rem; //18px
+$size-sm: 1rem; //16px
+$size-xs: 0.875rem; //14px
+$size-xxs: 0.75rem; //12px
+
+$typography-colors: (
+  'contrast': var(--primary-color),
+  'black': var(--black-color),
+  'white': var(--white-color),
+);
+
+$weights-typo: (
+  'sans': (
+    'regular': 400,
+    'medium': 500,
+    'semi-bold': 600,
+    'bold': 700,
+  ),
+  'roboto': (
+    'regular': 400,
+    'medium': 500,
+    'bold': 700,
+  ),
+  'titilium': (
+    'light': 300,
+    'regular': 400,
+    'semi-bold': 600,
+    'bold': 700,
+  ),
+);
+
+@function weight-typo($key: 'sans', $variant: 'regular') {
+  $map: map-get($weights-typo, $key);
+  @return map-get($map, $variant);
+}

@@ -1,0 +1,41 @@
+@mixin style-text(
+  $fontSize: 16px,
+  $color: #000000,
+  $fontFamily: georgia,
+) {
+  text-align: center;
+  font-size: $fontSize;
+  color: $color;
+  font-family: $fontFamily;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.bigTitle {
+  @include style-text(
+    $fontSize: 50px,
+    $color: #2A5EC7,
+  );
+}
+
+.alternativeTitle {
+  @include style-text(
+    $fontSize: 20px,
+    $fontFamily: sans-serif,
+  );
+  font-weight: 100;
+}
+
+.mainTitle {
+  @include style-text(
+    $fontSize: 25px,
+  );
+  font-weight: 500;
+}
+
+.subtitle {
+  @include style-text(
+    $fontSize: 16px,
+  );
+  font-weight: 500;
+}

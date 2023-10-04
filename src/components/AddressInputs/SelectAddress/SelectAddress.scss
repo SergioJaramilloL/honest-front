@@ -1,0 +1,58 @@
+.selectAddress {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f7f5f5;
+  margin-bottom: 10px;
+
+  .selectAddress_info {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      margin: 0;
+      line-height: 1;
+    }
+
+    .selectAddress_info_title {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: #2A5EC7;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .selectAddress_info_subtitle {
+      font-family: Arial, Helvetica, sans-serif;
+      color: black;
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+  }
+  
+  button.customButton {
+    padding: 0 25px;
+    margin: 0;
+    padding: 0 15px;
+  }
+
+  .selectAddress_remove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid #2A5EC7;
+    background: #f7f5f5;
+    font-size: 12px;
+    color: #2A5EC7;
+    margin-right: 5px;
+  }
+}
