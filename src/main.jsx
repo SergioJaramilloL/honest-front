@@ -1,12 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { RouterProvider } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import store from '@/redux'
 
 import '@/index.scss'
-import '@/sass/base/normalize.scss'
 
-import { RouterProvider } from 'react-router-dom'
+import store from '@/redux'
 import router from '@/router'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

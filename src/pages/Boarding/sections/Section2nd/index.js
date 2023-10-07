@@ -1,0 +1,1 @@
+export { default as Section2nd } from './Section2nd';

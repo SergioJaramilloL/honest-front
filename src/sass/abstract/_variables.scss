@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'PT Serif', serif;
+  src: url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=PT+Serif&display=swap');
+
+}
+@font-face {
+  font-family: 'Lato', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Merriweather:wght@300;400;700&family=PT+Serif&display=swap');
+}
+
+:root {
+  /* colors */
+  --primary-color: #06c;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --dark-grey-color: #333333;
+  --grey-dark-color: #A3A5A9;
+  --grey-light-color: #B0B1B3;
+
+  /* fonts */
+  --primary-font: 'Merriweather', Georgia, serif;
+  --secondary-font: 'Lato', sans-serif;
+}
+
+
