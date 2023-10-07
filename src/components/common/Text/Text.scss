@@ -1,7 +1,7 @@
 @mixin style-text(
   $fontSize: 16px,
   $color: #000000,
-  $fontFamily: georgia,
+  $fontFamily: var(--primary-font),
 ) {
   text-align: center;
   font-size: $fontSize;
@@ -14,14 +14,14 @@
 .bigTitle {
   @include style-text(
     $fontSize: 50px,
-    $color: #2A5EC7,
+    $color: var(--primary-color),
   );
 }
 
 .alternativeTitle {
   @include style-text(
-    $fontSize: 20px,
-    $fontFamily: sans-serif,
+    $fontSize: 21px,
+    $fontFamily: var(--secondary-font),
   );
   font-weight: 100;
 }
