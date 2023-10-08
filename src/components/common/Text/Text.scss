@@ -1,26 +1,25 @@
 @mixin style-text(
-  $fontSize: 16px,
-  $color: #000000,
+  $fontSize: 1rem,
+  $color: var(--black-color),
   $fontFamily: var(--primary-font),
 ) {
   text-align: center;
-  font-size: $fontSize;
-  color: $color;
   font-family: $fontFamily;
+  font-size: $fontSize;
   line-height: 1.2;
-  margin: 0;
+  color: $color;
 }
 
 .bigTitle {
   @include style-text(
-    $fontSize: 50px,
+    $fontSize: 3.4rem,
     $color: var(--primary-color),
   );
 }
 
 .alternativeTitle {
   @include style-text(
-    $fontSize: 21px,
+    $fontSize: 1.4rem,
     $fontFamily: var(--secondary-font),
   );
   font-weight: 100;
@@ -28,14 +27,14 @@
 
 .mainTitle {
   @include style-text(
-    $fontSize: 25px,
+    $fontSize: 1.8rem,
   );
   font-weight: 500;
 }
 
 .subtitle {
   @include style-text(
-    $fontSize: 16px,
+    $fontSize: 1rem,
   );
   font-weight: 500;
 }

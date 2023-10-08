@@ -1,14 +1,13 @@
 /* eslint-disable react/prop-types */
-// Dependencies
 import { useSelector } from "react-redux";
-// Styles
-import '../../Boarding.scss';
-// Components
+
+import './Section2nd.scss'
+
 import { Text } from '@/components/common/Text';
 import { CustomButton } from "@/components/common/CustomButton";
 import { TextInput } from "@/components/common/TextInput";
 import { BottomSteps } from "@/components/common/BottomSteps";
-// utils
+
 import { selectUser } from "@/redux/slices/userSlice";
 
 const Section2nd = ({ onNextStep, infoSteps }) => {
@@ -16,37 +15,44 @@ const Section2nd = ({ onNextStep, infoSteps }) => {
 
   const { userData } = useSelector(selectUser)
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    onNextStep()
+  }
+
   return (
-    <div
-      className='boardingContainer'
+    <form
+      className="section2nd"
+      onSubmit={onNextStep}
     >
       <Text
-        classStyle={'mainTitle'}
+        classStyle="mainTitle"
       >Awesome! Let&apos;s get started with the basics.</Text>
       <div
-        className='boardingContainer__inputs'
+        className="section2nd__inputs"
       >
         <TextInput 
-        label='First Name'
+        label="First Name"
         name="firstname"
         value={userData.firstname}
         />
         <TextInput 
-          label='Last Name'
+          label="Last Name"
           name="lastname"
           value={userData.lastname}
         />
       </div>
       <div>
         <CustomButton
-          onAction={onNextStep}
-          >{`Next`}</CustomButton>
+          onAction={handleSubmit}
+          type="submit"
+          >Next</CustomButton>
         <BottomSteps
           currentStep={currentStep}
           totalSteps={totalSteps}
           />
       </div>
-    </div>
+    </form>
   )
 }
 

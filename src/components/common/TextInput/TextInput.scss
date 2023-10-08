@@ -1,27 +1,32 @@
 .textInput {
   position: relative;
   display: flex;
-  flex-direction: column;
-  font-family: var(--secondary-font);
+  justify-content: center;
+
+  width: 100%;
+  height: 2.5rem;
+  margin: 0.625rem 0;
   border: 1px solid var(--black-color);
   border-radius: 5px;
-  height: 40px;
-  margin: 10px;
-  width: 100%;
+
+  font-family: var(--secondary-font);
 
   input {
-    border: none;
-    background: none;
     width: 100%;
     height: 100%;
+    padding: 0 0.7rem;
+    border: none;
+
+    font-size: 0.8125rem;
+
+    background: none;
     color: var(--primary-color);
-    font-size: 13px;
-    padding: 0 8px;
 
     &::placeholder {
-      color: var(--grey-light-color);
-      font-size: 12px;
+      font-size: 0.7188rem;
       font-weight: 600;
+      letter-spacing: 0.08rem;
+      color: var(--grey-light-color);
     }
 
     &:focus::-webkit-input-placeholder {
@@ -34,37 +39,43 @@
 
     &:focus + label {
       display: block;
-      color: var(--black-color);
-      top: -8px;
-      left: 10px;
-      font-size: 10px;
-      transition: all ease 0.2s;
+      top: -0.4rem;
+      left: 0.625rem;
+
+      font-size: 0.625rem;
+
       opacity: 1;
+      color: var(--black-color);
+      transition: all ease 0.2s;
     }
 
   }
 
   label {
-    pointer-events: none;
-    display: block;
     position: absolute;
-    font-size: 12px;
-    color: var(--white-color);
-    top: 12px;
-    left: 8px;
-    background: var(--white-color);
-    padding: 0 2px;
+    display: block;
+    top: 0.7rem;
+    left: 0.5rem;
+
+    padding: 0 0.125rem;
+
+    font-size: 0.75rem;
     font-weight: bold;
+    letter-spacing: 0.04rem;
+
+    background: white;
+    color: var(--white-color);
     opacity: 0;
+    pointer-events: none;
   }
 
   .keepLabel {
     display: block;
+    top: -0.4rem;
+    left: 0.625rem;
+    font-size: 0.625rem;
     color: var(--black-color);
-    top: -8px;
-    left: 10px;
-    font-size: 10px;
-    transition: all ease 0.4s;
     opacity: 1;
+    transition: all ease 0.4s;
   }
 }

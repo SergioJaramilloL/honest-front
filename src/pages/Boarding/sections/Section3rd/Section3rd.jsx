@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
-// Dependencies
+
 import { useSelector } from 'react-redux'
-// Styles
-import '../../Boarding.scss'
-// Components
+
+import './Section3rd.scss'
+
 import { Text } from '@/components/common/Text'
 import { AddressInputs } from '@/components/AddressInputs'
 import { CustomButton } from '@/components/common/CustomButton'
 import { BottomSteps } from '@/components/common/BottomSteps'
-// utils
+
 import { selectUser } from '@/redux/slices/userSlice'
 
 const Section3rd = ({ onNextStep, infoSteps }) => {
@@ -16,22 +16,28 @@ const Section3rd = ({ onNextStep, infoSteps }) => {
 
   const { userData } = useSelector(selectUser)
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    onNextStep()
+  }
+
   return(
-    <div
-      className='boardingContainer'
+    <form
+      className="section3rd"
+      onSubmit={handleSubmit}
     >
       <Text
-        classStyle={'mainTitle'}
+        classStyle="mainTitle"
       >Pleasure to meet you, {userData?.firstname}!<br/> What is your install address?</Text>
       <AddressInputs/>
       <div>
-        <CustomButton onAction={onNextStep}>Yes!</CustomButton>
+        <CustomButton onAction={onNextStep} type="submit">Yes!</CustomButton>
         <BottomSteps
           currentStep={currentStep}
           totalSteps={totalSteps}
         />
       </div>
-    </div>
+    </form>
   )
 }
 
