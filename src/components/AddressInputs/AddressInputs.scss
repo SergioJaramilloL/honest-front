@@ -1,31 +1,42 @@
 .addressInput {
-  width: 100%;
   position: relative;
+  width: 100%;
+
+  @media (min-width: 480px) {
+    width: 90%;
+  }
 
   .addressInput_childs {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     
-    div:nth-child(1) {
-      width: 100%;
+    > div:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-left: 1px;
+      width: 80%;
+
+      .textInput {
+        margin: 0;
+      }
+
+      p {
+        margin-top: 0.2rem;
+        font-size: 0.6rem;
+        text-decoration: underline;
+        font-family: var(--secondary-font);
+        color: var(--black-color);
+        cursor: pointer;
+      }
     }
     
     div:nth-child(2) {
-      width: 100%;
+      width: 20%;
+      margin: 0 0 0 0.4rem ;
     }
     
-    @media( min-width: 480px) {
-      flex-direction: row;
-      
-      div:nth-child(1) {
-        width: 80%;
-      }
-      
-      div:nth-child(2) {
-        width: 20%;
-      }
-    }
   }
 
   .input-disabled .textInput:first-child{
@@ -37,7 +48,9 @@
   }
 
   .addressInput_list {
-    width: 100%;
     position: absolute;
+    width: 100%;
+    margin-top: 0.5rem;
+    z-index: 100;
   }
 }

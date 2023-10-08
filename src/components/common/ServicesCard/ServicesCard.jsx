@@ -17,13 +17,13 @@ const ServicesCard = ({ plan, check }) => {
 
   return (
     <article
-      className='servicesCard'
+      className='servicesCard selected'
     >
       <p className='servicesCard_title'>
         {label}
       </p>
       <p className='servicesCard_subtitle'>
-        {`Service`}
+        Service
       </p>
       <img 
         src='./x-yellow.svg' 

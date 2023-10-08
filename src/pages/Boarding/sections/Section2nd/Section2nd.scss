@@ -1,0 +1,19 @@
+.section2nd {
+  .mainTitle {
+    margin-bottom:3rem;
+  }
+
+  .section2nd__inputs {
+    width: 100%;
+    margin-bottom: 5.5rem;
+
+    @media (min-width: 768px) {
+      width: 73%;
+    }
+
+  }
+
+  .customButton {
+    padding: 0 3.8rem;
+  }
+}

@@ -2,69 +2,70 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: white;
+
+  width: 10.5em;
+  margin: 0.625rem;
+  padding: 1.5rem 2rem;
   border: 1px solid #e5e5e5;
-  max-width: 200px;
   border-radius: 5px;
-  padding: 20px 40px;
-  margin: 10px;
-  width: 230px;
+
+  background: var(--white-color);
 
   p {
+    margin: 0;
     text-align: center;
     line-height: 1;
-    margin: 0;
   }
 
   .servicesCard_title {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 35px;
+    font-family: var(--primary-font);
+    font-size: 2.1875rem;
     font-weight: 400;
   }
 
   .servicesCard_subtitle {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   img {
-    width: 30px;
-    height: 30px;
-    margin: 15px 0;
+    width: 1.875rem;
+    height: 1.875rem;
+    margin: 0.9375rem 0;
   }
 
   .servicesCard_price {
-    font-family: 'Gilroy-Bold', sans-serif;;
     display: table;
-    font-size: 60px;
+    font-family: 'Gilroy-Bold', sans-serif;;
+    font-size: 3.75rem;
     font-weight: 600;
-    color: #2A5EC7;
+    color: var(--primary-color);
 
     span {
-      font-size: 15px;
+      font-size: 0.9375rem;
       font-weight: 500;
     }
 
     span:first-child {
       display: table-cell;
-      font-size: 25px;
+      font-size: 1.5625rem;
       font-weight: 600;
       vertical-align: middle;
     }
   }
 
   .servicesCard_input {
-    width: 25px;
-    height: 25px;
-    margin: 20px 0 0;
-    background-color: white;
+    width: 1.5625rem;
+    height: 1.5625rem;
+    margin: 1.25rem 0 0;
     border: 1px solid grey;
+    background-color: var(--white-color);
 
     &:checked {
-      border: 1px solid #2A5EC7;
-      padding: 9px;
-      background-color: #2A5EC7;
-      color: white;
+      padding: 0.5625rem;
+      border: 1px solid var(--primary-color);
+      background-color: var(--primary-color);
+      color: var(--white-color);
     }
   }
 }
