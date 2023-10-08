@@ -1,14 +1,13 @@
 /* eslint-disable react/prop-types */
-// Dependencies
 import { useSelector } from 'react-redux'
-// Styles
-import '../../Boarding.scss'
-// Components
+
+import './Section4th.scss'
+
 import { Text } from "@/components/common/Text"
 import { ServicesCard } from "@/components/common/ServicesCard"
 import { CustomButton } from "@/components/common/CustomButton"
 import { BottomSteps } from "@/components/common/BottomSteps"
-// Utils
+
 import { selectUser } from "@/redux/slices/userSlice"
 
 const Section4th = ({ onNextStep, infoSteps }) => {
@@ -18,13 +17,13 @@ const Section4th = ({ onNextStep, infoSteps }) => {
 
   return (
     <div
-      className='boardingContainer'
+      className="section4th"
     >
       <Text
-        classStyle='mainTitle'
+        classStyle="mainTitle"
       >Please select the TV plan you want to enjoy:</Text>
       <div
-        className='boardingContainer__services'
+        className="section4th__services"
       >
         {selectAddress?.plans.map((plan) => (
           <ServicesCard 
@@ -33,15 +32,13 @@ const Section4th = ({ onNextStep, infoSteps }) => {
           />
         ))}
       </div>
-      <div>
-        <CustomButton 
-          onAction={onNextStep}
-          >I AM READY!</CustomButton>
-        <BottomSteps
-          currentStep={currentStep}
-          totalSteps={totalSteps}
-        />
-      </div>
+      <CustomButton 
+        onAction={onNextStep}
+        >I AM READY!</CustomButton>
+      <BottomSteps
+        currentStep={currentStep}
+        totalSteps={totalSteps}
+      />
     </div>
   )
 }

@@ -3,9 +3,7 @@ import './Text.scss'
 
 const Text = ({ classStyle, children }) => {
   return (
-    <p
-      className={classStyle}
-    >{children}</p>
+    <p className={classStyle} >{children}</p>
   )
 }
 

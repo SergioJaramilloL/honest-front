@@ -2,9 +2,10 @@
 import { useDispatch, useSelector } from 'react-redux'
 
 import './TextInput.scss'
+
 import { setUser, selectUser } from '@/redux/slices/userSlice'
 
-const TextInput = ({ label, name, value, onAction, disabled=false }) => {
+const TextInput = ({ label, name, placeholder = label, value, onAction, disabled=false }) => {
   const dispatch = useDispatch()
   const { userData } = useSelector(selectUser)
 
@@ -20,7 +21,7 @@ const TextInput = ({ label, name, value, onAction, disabled=false }) => {
         type='text'
         id={name}
         name={name}
-        placeholder={`${name}`.toUpperCase()}
+        placeholder={`${placeholder}`.toUpperCase()}
         onChange={onAction || handleChange}
         value={value || userData[name]}
         autoComplete='off'

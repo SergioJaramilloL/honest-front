@@ -3,12 +3,15 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.1);
+
+  padding: 0.625rem;
+  margin-bottom: 0.625rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 10px;
-  background-color: #f7f5f5;
-  margin-bottom: 10px;
+
+  background-color: #F7F7F7;
 
   .selectAddress_info {
     display: flex;
@@ -17,42 +20,55 @@
     p {
       margin: 0;
       line-height: 1;
+      letter-spacing: 0.03rem;
     }
 
     .selectAddress_info_title {
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      color: var(--primary-color);
-      font-size: 18px;
+      margin-bottom: 0.2rem;
+      font-family: var(--primary-font);
+      font-size: 1rem;
       font-weight: 500;
-      margin-bottom: 5px;
+      color: var(--primary-color);
     }
 
     .selectAddress_info_subtitle {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--black-color);
-      font-size: 12px;
+      font-family: var(--secondary-font);
+      font-size: 0.75rem;
       font-weight: 400;
+      color: var(--black-color);
     }
-
   }
   
-  button.customButton {
-    padding: 0 25px;
+  .customButton {
+    height: 2.5rem;
+    padding: 0 1.5rem;
     margin: 0;
-    padding: 0 15px;
   }
 
   .selectAddress_remove {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
+
+    width: 1.875rem;
+    height: 1.875rem;
+    margin: 0.5rem 0.3125rem;
+
     border-radius: 100%;
     border: 1px solid var(--primary-color);
-    background: #f7f5f5;
-    font-size: 12px;
+
+
+    font-family: var(--secondary-font);
+    font-size: 0.75rem;
+    line-height: 26;
+
     color: var(--primary-color);
-    margin-right: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--primary-color);
+      color: #f7f5f5;
+    }
+
   }
 }

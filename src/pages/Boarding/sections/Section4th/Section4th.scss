@@ -1,0 +1,18 @@
+.section4th {
+  padding: 0 2px;
+
+  .mainTitle {
+    margin-bottom: 6rem;
+  }
+
+  .section4th__services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 6rem;
+  }
+
+  .customButton {
+    padding: 0 2.5rem
+  }
+}

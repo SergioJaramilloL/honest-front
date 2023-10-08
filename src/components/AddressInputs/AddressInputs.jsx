@@ -3,8 +3,10 @@ import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import './AddressInputs.scss'
-import { SelectAddress } from './SelectAddress'
+
 import { TextInput } from "@/components/common/TextInput"
+import { SelectAddress } from './SelectAddress'
+
 import { 
   setAddress, 
   selectUser,
@@ -40,13 +42,17 @@ const AddressInputs = () => {
   return (
     <div className='addressInput'>
       <div className={`addressInput_childs ${selectAddress._id && 'input-disabled'}`}>
-        <TextInput
-          label='Please type in your street address'
-          name="address"
-          value={userData.address}
-          onAction={handleSearch}
-          disabled={selectAddress._id}
-        />
+        <div className='addressInput_firstChild'>
+          <TextInput
+            label='Please type in your street address'
+            name="address"
+            placeholder='STREET ADDRESS, CITY, STATE'
+            value={userData.address}
+            onAction={handleSearch}
+            disabled={selectAddress._id}
+          />
+          {addressList.length === 0 && <p>I can&apos;t find my address</p>}
+        </div>
         <TextInput 
           label='Apt #'
           name="apt"

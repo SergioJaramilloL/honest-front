@@ -1,8 +1,7 @@
-// Dependencies
 import { useState } from "react";
-// Styles
+
 import './Boarding.scss';
-// Components
+
 import { Section1st } from "./sections/Section1st";
 import { Section2nd } from "./sections/Section2nd";
 import { Section3rd } from "./sections/Section3rd";
@@ -19,52 +18,39 @@ const Boarding = () => {
     setSteps((prev) => (prev + 1))
   }
 
-  if( steps === 0 ) {
-    return (
-      <Section1st
-        onNextStep={handleNextStep}
-      />
-    )
-  } 
-
-  if( steps === 1 ) {
-    return(
-      <Section2nd
-        onNextStep={handleNextStep}
-        infoSteps={{ currentStep: steps, totalSteps } }
-      />
-    )
-  }
-
-  if( steps === 2 ) { 
-    return(
-      <Section3rd
-        onNextStep={handleNextStep}
-        infoSteps={{ currentStep: steps, totalSteps } }
-      />
-    )
-  }
-
-  if( steps === 3 ) {
-    return (
-      <Section4th
-        onNextStep={handleNextStep}
-        infoSteps={{ currentStep: steps, totalSteps } }
-      />
-    )
-  }
-
-  if( steps === 4 ) {
-    return (
-      <Section5th
-        onNextStep={handleNextStep}
-        infoSteps={{ currentStep: steps, totalSteps } }
-      />
-    )
-  }
-
   return (
-    <Section6th/>
+    <div className="boardingContainer">
+      { steps === 0 &&       
+        <Section1st
+          onNextStep={handleNextStep}
+        /> 
+      }
+      { steps === 1 &&       
+        <Section2nd
+          onNextStep={handleNextStep}
+          infoSteps={{ currentStep: steps, totalSteps } }
+        /> 
+      }
+      { steps === 2 &&       
+        <Section3rd
+          onNextStep={handleNextStep}
+          infoSteps={{ currentStep: steps, totalSteps } }
+        /> 
+      }
+      { steps === 3 &&       
+        <Section4th
+          onNextStep={handleNextStep}
+          infoSteps={{ currentStep: steps, totalSteps } }
+        />
+      }
+      { steps === 4 &&       
+        <Section5th
+          onNextStep={handleNextStep}
+          infoSteps={{ currentStep: steps, totalSteps } }
+        />
+      }
+      { steps === 5 && <Section6th/> }
+    </div>
   )
 }
 
