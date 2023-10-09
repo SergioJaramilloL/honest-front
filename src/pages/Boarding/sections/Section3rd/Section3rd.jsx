@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-
 import { useSelector } from 'react-redux'
 
 import './Section3rd.scss'
