@@ -1,5 +1,5 @@
 @mixin style-text(
-  $fontSize: 1rem,
+  $fontSize: 1em,
   $color: var(--black-color),
   $fontFamily: var(--primary-font),
 ) {
@@ -12,14 +12,14 @@
 
 .bigTitle {
   @include style-text(
-    $fontSize: 3.4rem,
+    $fontSize: 3.2em,
     $color: var(--primary-color),
   );
 }
 
 .alternativeTitle {
   @include style-text(
-    $fontSize: 1.4rem,
+    $fontSize: 1.4em,
     $fontFamily: var(--secondary-font),
   );
   font-weight: 100;
@@ -27,7 +27,7 @@
 
 .mainTitle {
   @include style-text(
-    $fontSize: 1.8rem,
+    $fontSize: 1.8em,
   );
   font-weight: 500;
 }

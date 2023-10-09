@@ -28,7 +28,7 @@ const Section4th = ({ onNextStep, infoSteps }) => {
         {selectAddress?.plans.map((plan) => (
           <ServicesCard 
             key={plan.id}
-            plan={plan}
+            infoPlan={plan}
           />
         ))}
       </div>
