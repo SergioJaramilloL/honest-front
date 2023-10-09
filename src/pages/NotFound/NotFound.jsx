@@ -1,8 +1,10 @@
+import { Text } from "@/components/common/Text"
+
 const NotFound = () => {
   return(
     <div>
-      <h1>{`404`}</h1>
-      <p>{`Didn't find anything here`}</p>
+      <Text classStyle='bigTitle'>404</Text>
+      <Text classStyle='alternativeTitle'>Didn&apos;t find anything here</Text>
     </div>
   )
 }

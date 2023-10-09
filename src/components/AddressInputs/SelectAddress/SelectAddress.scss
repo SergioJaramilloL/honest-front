@@ -6,8 +6,8 @@
 
   box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.1);
 
-  padding: 0.625rem;
-  margin-bottom: 0.625rem;
+  padding: 0.62rem;
+  margin-bottom: 0.62rem;
   border: 1px solid #ccc;
   border-radius: 5px;
 
@@ -20,28 +20,29 @@
     p {
       margin: 0;
       line-height: 1;
-      letter-spacing: 0.03rem;
+      letter-spacing: 0.5px;
     }
 
     .selectAddress_info_title {
       margin-bottom: 0.2rem;
       font-family: var(--primary-font);
-      font-size: 1rem;
+      font-size: 1em;
       font-weight: 500;
       color: var(--primary-color);
     }
 
     .selectAddress_info_subtitle {
       font-family: var(--secondary-font);
-      font-size: 0.75rem;
+      font-size: 0.75em;
       font-weight: 400;
       color: var(--black-color);
     }
   }
   
   .customButton {
+    font-size: 0.73em;
     height: 2.5rem;
-    padding: 0 1.5rem;
+    padding: 0 1.5em;
     margin: 0;
   }
 

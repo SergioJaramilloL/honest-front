@@ -1,31 +1,30 @@
-body {
-  display: flex;
-  justify-content: center;
-  place-items: center;
+body {  
+  font-size: 13px;
   
-  min-width: 20rem;
-  min-height: 100vh;
-  margin: 0;
-  
-  font-size: 16px;
-  
-  @media screen and (max-width: 768px) {
-    font-size: 14px;
+  @media (min-width: 576px) {
+    font-size: 14.5px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 16px;
   }
   
-  @media screen and (max-width: 460px) {
-    font-size: 12px;
-  }
 }
 
 #root {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  min-width: 20rem; 
+
+  @media(max-width: 320px) {
+    display: block;
+  }
 }
 
 main {
-  padding: 0.625rem;
+  padding: 0.63rem;
 }
 
 * {
@@ -47,7 +46,15 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 input[type='radio'] {
-  accent-color: var(--primary-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 100%;
+  cursor: pointer;
+
+  &:checked {
+    border: 1px solid var(--primary-color);
+    background: radial-gradient(circle, rgba(255,255,255,1) 24%, rgba(0,102,204,1) 26%);
+  }
 }
 
 input::-webkit-contacts-auto-fill-button {
